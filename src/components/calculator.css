@@ -5,9 +5,11 @@ div.wrapper {
   width: 400px;
   justify-content: space-around;
   flex-wrap: wrap;
+  border-radius: 0 0 5px 5px;
+  margin: 5rem auto;
 }
 
-input {
+#output-field {
   margin: 0;
   background-color: grey;
   height: 80px;
@@ -15,15 +17,18 @@ input {
   text-align: right;
   font-size: 2rem;
   color: aliceblue;
+  padding: 10px 20px 0;
+  border-radius: 5px 5px 0 0;
+
 }
 
-div.list {
+div.button-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 0;
 }
 
-li {
+button {
   border: 1px solid rgb(134, 129, 129);
   list-style-type: none;
   text-align: center;
@@ -40,7 +45,8 @@ li {
 .no-btn {
   border-right: 1px solid transparent;
   outline: none;
-  text-align: left;
+  text-align: right;
+  color: transparent;
 }
 
 .operations-btn {
