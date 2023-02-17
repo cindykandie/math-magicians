@@ -1,32 +1,164 @@
-import React from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 import './calculator.css';
 
-export default function calculator() {
+export default function Calculator() {
+  const [state, setState] = useState({ total: 0, next: null, operation: null });
+  const operateEvent = (e) => {
+    const btnName = e.target.innerHTML;
+    const result = calculate(state, btnName);
+    setState(result);
+  };
+  const { total, operation, next } = state;
   return (
     <>
       <div className="wrapper">
-        <input type="number" value="0" />
-        <div className="list">
-          <li>AC</li>
-          <li>+/-</li>
-          <li>%</li>
-          <li className="operations-btn">&divide;</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li className="operations-btn">x</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li className="operations-btn">-</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li className="operations-btn">+</li>
-          <li className="no-btn"> </li>
-          <li className="zero-btn">0</li>
-          <li>.</li>
-          <li className="operations-btn">=</li>
+        <div id="output-field">
+          {total}
+          {operation}
+          {next}
+        </div>
+        <div className="button-list">
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            AC
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            +/-
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            %
+          </button>
+          <button
+            type="button"
+            className="calc-btn operations-btn"
+            onClick={operateEvent}
+          >
+            &divide;
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            7
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            8
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            9
+          </button>
+          <button
+            type="button"
+            className="calc-btn operations-btn"
+            onClick={operateEvent}
+          >
+            x
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            4
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            5
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            6
+          </button>
+          <button
+            type="button"
+            className="calc-btn operations-btn"
+            onClick={operateEvent}
+          >
+            -
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            1
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            2
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            3
+          </button>
+          <button
+            type="button"
+            className="calc-btn operations-btn"
+            onClick={operateEvent}
+          >
+            +
+          </button>
+          <button
+            type="button"
+            className="calc-btn no-btn"
+            onClick={operateEvent}
+          >
+            0
+          </button>
+          <button
+            type="button"
+            className="zero-btn calc-btn"
+            onClick={operateEvent}
+          >
+            0
+          </button>
+          <button
+            type="button"
+            className="calc-btn"
+            onClick={operateEvent}
+          >
+            .
+          </button>
+          <button
+            type="button"
+            className="calc-btn operations-btn"
+            onClick={operateEvent}
+          >
+            =
+          </button>
         </div>
       </div>
     </>
