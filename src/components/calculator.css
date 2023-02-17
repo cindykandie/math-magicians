@@ -1,0 +1,48 @@
+div.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 400px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+input {
+  margin: 0;
+  background-color: grey;
+  height: 80px;
+  width: 400px;
+  text-align: right;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+div.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 0;
+}
+
+li {
+  border: 1px solid rgb(134, 129, 129);
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+  background-color: gainsboro;
+}
+
+.zero-btn {
+  border-left: 1px solid transparent;
+  outline: none;
+  text-align: left;
+}
+
+.no-btn {
+  border-right: 1px solid transparent;
+  outline: none;
+  text-align: left;
+}
+
+.operations-btn {
+  background-color: rgb(221, 163, 86);
+}
