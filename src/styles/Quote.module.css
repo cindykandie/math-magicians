@@ -1,0 +1,10 @@
+.qText {
+  width: 50%;
+  margin: 4rem auto 0;
+  font-size: 1.3rem;
+}
+
+.qOwner {
+  text-align: right;
+  color: rgb(32, 159, 243);
+}

@@ -1,0 +1,48 @@
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+  margin-right: 1rem;
+}
+
+.navLinks li {
+  padding: 0 1.5rem;
+  text-decoration-color: rgb(32, 176, 243);
+}
+
+.link {
+  color: rgb(32, 176, 243);
+  transition: 0.7s ease-in-out;
+}
+
+.link:hover {
+  color: black;
+  font-weight: 500;
+}
+
+.firstChild,
+.secChild {
+  border-right: 2px solid white;
+}
+
+.logo {
+  color: rgb(32, 176, 243);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .link:hover {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
